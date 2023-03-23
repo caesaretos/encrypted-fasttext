@@ -16,7 +16,7 @@ cmake_minimum_required (VERSION 3.5.1)
 ### After you run "make install" in your build directory, you can build your custom application.
 ### If you need your application to be linked statically, then run "cmake .. -DBUILD_STATIC=ON"
 
-project(encrypted-ft)
+project(encrypted-fasttext)
 set(CMAKE_CXX_STANDARD 17)
 option( BUILD_STATIC "Set to ON to include static versions of the library" OFF)
 
@@ -41,5 +41,9 @@ else()
     set( CMAKE_EXE_LINKER_FLAGS ${OpenFHE_EXE_LINKER_FLAGS} )
     link_libraries( ${OpenFHE_SHARED_LIBRARIES} )
 endif()
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(src)

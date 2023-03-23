@@ -1,1 +1,1 @@
-add_executable( encrypted-ft encrypted-ft.cpp )
+add_executable( encrypted-fasttext encrypted-fasttext.cpp )

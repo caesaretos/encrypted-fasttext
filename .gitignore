@@ -1,0 +1,44 @@
+# Ignore everything in this directory
+*~
+*.o
+*.o.d
+*.gcov
+bin/
+build*/
+cmake-build-debug
+docs/doxygen
+docs/sphinx
+_build/
+api/
+doxyoutput/
+
+
+.ipynb_checkpoints
+
+**/gmp-*
+**/ntl-*
+timing/
+gmon.out
+## .gitattributes
+# Except this file
+!.gitignore
+
+.idea
+*/**/*.gch
+*.a
+*.class
+
+## for the moment
+.cproject
+.metadata/
+.project
+.settings/
+RemoteSystemTempFiles/
+.classpath
+.externalToolBuilders/
+/Default/
+
+.DS_Store
+
+# Visual Studio Code
+.vscode
